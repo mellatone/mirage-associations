@@ -1,0 +1,16 @@
+<h1>Mirage returned {{model.length}} records</h1>
+
+<br>
+
+{{#each model as |engagement|}}
+  id: {{engagement.id}}<br>
+  status: {{engagement.status}}<br>
+  status.id: {{engagement.status.id}}<br>
+  status.name:
+    {{#if engagement.status.name}}
+      <span class="engagement-status-name">
+        {{engagement.status.name}}
+      </span>
+    {{/if}}<br>
+  <hr>
+{{/each}}
